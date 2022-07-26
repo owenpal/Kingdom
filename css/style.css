@@ -1,0 +1,236 @@
+@font-face {
+    font-family: RiseOfKingdom;
+    src: url('../media/fonts/riseofkingdom.ttf');
+    font-family: Aileron;
+    src: url('../media/fonts/Aileron-Bold.otf')
+}
+
+/*---------------Header---------------*/
+
+#encabezado {
+    position: relative;
+}
+
+.titulo {
+    background-color: rgb(75, 0, 110);
+    color: rgb(240, 216, 55);
+    font-family: RiseOfKingdom;
+    font-size: 400%;
+    border: solid 4px rgb(240, 216, 55);
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+.usuario {
+    list-style: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1;
+    font-size: 20px;
+    color: rgb(240, 216, 55);
+}
+
+.usuario li {
+    display: inline;
+}
+
+/*---------------Nav---------------*/
+
+nav ul{
+    overflow: hidden;
+    background-color: rgb(75, 0, 110);
+    border: 4px solid rgb(240, 216, 55);
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    float: left;
+    display: block;
+    color: rgb(240, 216, 55);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+nav a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+nav input {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 15px;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+/*---------------Banner---------------*/
+.banner{
+    width:100%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+         
+.banner img {
+    width:100%;
+}
+
+/*---------------Body---------------*/
+body {
+    background-image: url(../media/images/fondo.jpg);
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Aileron;
+}
+
+#descripcion {
+    font-size: 35px;
+    text-shadow: 2px 2px rgb(240, 216, 55);
+    margin-bottom: 80px
+}
+
+.subTitulo {
+    font-size: 30px;
+    text-decoration: underline;
+    text-shadow: 2px 2px rgb(240, 216, 55);
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+}
+
+article {
+    background-color: lightgray;
+    border-radius: 15px;
+    text-align: center;
+}
+
+section article img {
+    width: 100px;
+    height: 100px;
+}
+
+/*---------------Footer------------*/
+.info {
+    text-shadow: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.social {
+    list-style: none;
+    font-size: 20px;
+}
+
+.social li {
+    padding: 10px;
+}
+
+/*--------------Contacto---------------*/
+.casillaContacto {
+    background-color: lightgray;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.casillaContacto textarea {
+    width: 98%;
+}
+
+/*---------------Grid---------------*/
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside
+}
+
+section {
+    grid-area: section;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#principal, 
+section {
+    display: grid;
+}
+
+#principal {
+    row-gap: 10px;
+}
+
+/*---------------Queries---------------*/
+@media screen and (min-width: 320px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 4% 6% 38% auto 15%;
+        grid-template-areas: "header" "nav" "aside" "section" "footer";
+    }
+    
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 4% 6% 38% auto 15%;
+        grid-template-areas: "header" "nav" "aside" "section" "footer";
+    }
+    
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+}
