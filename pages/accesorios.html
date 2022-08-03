@@ -12,20 +12,63 @@
 <body>
     <header>
 		<h1 class="titulo animate__animated animate__fadeInRight">Accesorios</h1>
-		<nav>
-			<ul id="barraNav">
-				<li><a href="../index.html">Home</a></li>
-				<li><a href="juegosdemesa.html">Juegos de Mesa</a></li>
-				<li><a href="comics.html">Cómics</a></li>
-				<li><a href="accesorios.html">Accesorios</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-				<input id="inNav" type="search" placeholder="Buscar...">
-			</ul>
-		</nav>
+		<ul class="usuario">
+			<li>Login</li>
+			<li>Registrarse</li>
+			<li>Carrito</li>
+		</ul>
+		
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="juegosdemesa.html">Juegos de mesa</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="comics.html">Cómics</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="accesorios.html">Accesorios</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="contacto.html">Contacto</a>
+				  </li>
+				  <!--<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Dropdown
+					</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="#">Action</a></li>
+					  <li><a class="dropdown-item" href="#">Another action</a></li>
+					  <li><hr class="dropdown-divider"></li>
+					  <li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled">Disabled</a>
+				  </li>-->
+				</ul>
+				<form class="d-flex" role="search">
+				  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+				  <button class="btn btn-outline-dark" type="submit">Buscar</button>
+				</form>
+			  </div>
+			</div>
+		  </nav>
+
 	</header>
+	
 	<div class="banner">
 		<img src="../media/images/banner.jpg" alt="Kingdom banner">
 	</div>
+	
 	<section>
 		<article>
 			<img src="../media/images/gift.png">
