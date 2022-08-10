@@ -1,0 +1,335 @@
+$color_principal: rgb(75, 0, 110);
+$color_principal2:  rgb(240, 216, 55);
+$color_secundario1: gray;
+$color_secundario2: white;
+$color_secundario3: lightgray;
+$color_secundario4: #eb4ed4;
+$color_secundario5: #3865c5;
+$color_secundario6: #25d366;
+$font1: RiseOfKingdom;
+$font2: Aileron;
+$background-color: rgba(199, 199, 199, 0.6);
+
+
+@font-face {
+    font-family: RiseOfKingdom;
+    src: url('../media/fonts/riseofkingdom.ttf');
+    font-family: Aileron;
+    src: url('../media/fonts/Aileron-Bold.otf')
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 20px;
+}
+
+
+/*---------------Header---------------*/
+
+#encabezado {
+    position: relative;
+}
+
+.titulo {
+    background-color: $color_principal;
+    color: $color_principal2;
+    font-family: $font1;
+    font-size: 2.5rem;
+    border: solid 4px $color_principal2;
+    margin-top: 0;
+}
+
+.usuario {
+	list-style: none;
+	position: absolute;
+	right: 30px;
+	top: 25px;
+	z-index: 1;
+	font-size: 1rem;
+	color: $color_principal2;
+	li {
+		display: inline;
+	}
+}
+
+.login {
+    color: $color_principal2;
+    background: none;
+    border: none;
+}
+
+/*---------------Nav---------------*/
+
+nav {
+	ul {
+		font-size: 1rem;
+		li {
+			display: inline;
+			a {
+				&:visited {
+					color: $color_principal;
+					text-decoration: none;
+				}
+				&:hover {
+					color: $color_secundario1;
+					text-decoration: none;
+				}
+				&:active {
+					color: $color_principal2;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	grid-area: nav;
+}
+
+.btn {
+    color: $color_principal;
+    border-color: $color_principal;
+}
+
+/*---------------Banner---------------*/
+
+.banner {
+	width: 100%;
+	margin-top: 0.5em;
+	margin-bottom: 2em;
+	box-shadow: 5px 10px 8px 10px #141414a6;
+	img {
+		width: 100%;
+	}
+}
+
+/*---------------Body---------------*/
+
+body {
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.6)), url(../media/images/fondo.jpg);
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: $font2;
+    position: relative;
+    padding-bottom: 15em;
+}
+
+#descripcion {
+    color: $color_principal;
+    text-shadow: 2px 2px $color_principal2;
+    background-color: $background-color;
+    font-size: 1.75rem;
+    margin-top: 1em;
+    margin-bottom: 50px; 
+}
+
+.subTitulo {
+    color: $color_principal;
+    background-color: $background-color;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-shadow: 2px 2px $color_principal2;
+    margin-bottom: 0;
+}
+
+button {
+    text-decoration: none;
+    color: $color_principal;
+    border-color: $color_principal;
+    border-radius: 5px;
+    background-color: $color_secundario2;
+    padding: 5px;
+}
+
+article {
+    background-color: $color_secundario3;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 0;
+    box-shadow: 5px 10px 8px 10px #141414a6;
+}
+
+section {
+	article {
+		img {
+			width: 11vw;
+			height: 11vh;
+		}
+		button {
+			&:hover {
+				background-color: $color_principal;
+				color: $color_secundario2;
+				border-color: $color_principal;
+			}
+		}
+	}
+	grid-area: section;
+	column-gap: 10px;
+	row-gap: 15px;
+	display: grid;
+}
+
+/*---------------Footer------------*/
+footer {
+	margin-top: 2rem;
+	background-position: center;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	grid-area: footer;
+	.conteiner {
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+		text-align: center;
+		.fuente-subtitulo {
+			text-align: center;
+			padding: 20px;
+			text-transform: uppercase;
+			font-size: 2em;
+			font-weight: 600;
+			color: $color_secundario2;
+		}
+		.footer_ {
+			display: flex;
+			justify-content: space-around;
+			a {
+				font-size: 3rem;
+				color: $color_secundario2;
+				.fa-instagram {
+					padding: 10px;
+					color: $color_secundario2;
+					&:hover {
+						color: $color_secundario4;
+						transform: scale(1.2);
+						transition: all 0.4s;
+					}
+				}
+				.fa-facebook {
+					padding: 10px;
+					color: $color_secundario2;
+					&:hover {
+						color: $color_secundario5;
+						transform: scale(1.2);
+						transition: all 0.4s;
+					}
+				}
+				.fa-envelope {
+					padding: 10px;
+					color: $color_secundario2;
+					&:hover {
+						color: $color_secundario1;
+						transform: scale(1.2);
+						transition: all 0.4s;
+					}
+				}
+				.fa-whatsapp {
+					padding: 10px;
+					color: $color_secundario2;
+					&:hover {
+						color: $color_secundario6;
+						transform: scale(1.2);
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*--------------Contacto---------------*/
+/*.casillaContacto {
+    background-color: $color_secundario3;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+.casillaContacto textarea {
+    width: 98%;
+}*/
+
+.formulario {
+    background-color: $color_secundario3;
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 10px 8px 10px #141414a6;
+}
+
+/*---------------Grid---------------*/
+
+header {
+	grid-area: header;
+}
+div {
+	grid-area: div;
+}
+#principal {
+	display: grid;
+	row-gap: 10px;
+}
+
+/*---------------Queries---------------*/
+@media screen and (max-width: 756px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 5% 4% 15% auto 20%;
+        grid-template-areas: "header" "nav" "div" "section" "footer";
+    }
+    
+    body {
+        height: 210vh;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .banner {
+        margin-top: 1em;
+    }
+
+    #descripcion {
+        font-size: 1.1rem;
+    }
+
+    .subTitulo {
+        margin-top: 1em;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    .usuario{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 757px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6% 4% 34% auto 16%;
+        grid-template-areas: "header" "nav" "div" "section" "footer";
+    }
+    
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        margin-top: 70px;
+    }
+
+    .subTitulo {
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+
+    .usuario {
+        display: inline
+    }
+}
