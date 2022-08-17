@@ -136,8 +136,14 @@ section {
   display: grid;
 }
 section article img {
-  width: 11vw;
-  height: 11vh;
+  width: 9.5vw;
+  height: 11.5vh;
+}
+section article img:hover {
+  transform: scale(2, 2);
+}
+section article h3 {
+  font-size: 1.25rem;
 }
 section article button:hover {
   background-color: rgb(75, 0, 110);

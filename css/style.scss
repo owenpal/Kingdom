@@ -1,23 +1,6 @@
-$color_principal: rgb(75, 0, 110);
-$color_principal2:  rgb(240, 216, 55);
-$color_secundario1: gray;
-$color_secundario2: white;
-$color_secundario3: lightgray;
-$color_secundario4: #eb4ed4;
-$color_secundario5: #3865c5;
-$color_secundario6: #25d366;
-$font1: RiseOfKingdom;
-$font2: Aileron;
-$background-color: rgba(199, 199, 199, 0.6);
+@import "variables";
 
-
-@font-face {
-    font-family: RiseOfKingdom;
-    src: url('../media/fonts/riseofkingdom.ttf');
-    font-family: Aileron;
-    src: url('../media/fonts/Aileron-Bold.otf')
-}
-
+@import "fuentes";
 
 html {
     position: relative;
@@ -153,8 +136,14 @@ article {
 section {
 	article {
 		img {
-			width: 11vw;
-			height: 11vh;
+			width: 9.5vw;
+			height: 11.5vh;
+			&:hover {
+				transform: scale(2, 2);
+			}
+		}
+		h3 {
+			font-size: 1.25rem;
 		}
 		button {
 			&:hover {
