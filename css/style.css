@@ -259,7 +259,7 @@ div {
     grid-template-areas: "header" "nav" "div" "section" "footer";
   }
   body {
-    height: 210vh;
+    height: 270vh;
   }
   section {
     display: grid;
