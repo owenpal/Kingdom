@@ -1,0 +1,75 @@
+@media screen and (max-width: 756px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 5% 4% 15% auto 20%;
+        grid-template-areas: "header" "nav" "div" "section" "footer";
+    }
+    
+    body {
+        height: 210vh;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .banner {
+        margin-top: 1em;
+    }
+
+    #descripcion {
+        font-size: 1.1rem;
+    }
+
+    .subTitulo {
+        margin-top: 1em;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    .usuario{
+        display: none;
+    }
+
+    section {
+        article {
+            img {
+                width: 25vw;
+                height: 12vh;
+            }
+            h3 {
+                font-size: 0.80rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 757px) {
+    #principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6% 4% 34% auto 16%;
+        grid-template-areas: "header" "nav" "div" "section" "footer";
+    }
+    
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        margin-top: 70px;
+    }
+
+    .subTitulo {
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+
+    .usuario {
+        display: inline
+    }
+}

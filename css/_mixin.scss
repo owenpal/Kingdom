@@ -1,0 +1,16 @@
+$ig:#b14eeb;
+$wp: #25d366;
+$fb: #3865c5;
+$mail: lightgray;
+
+@mixin redes ($hover) {
+
+    padding: 10px;
+    color: #fff;
+
+    &:hover{
+        color: $hover;
+        transform: scale(1.2);
+        transition: all 0.4s;
+    }
+}
