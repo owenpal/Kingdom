@@ -7,7 +7,7 @@
     }
     
     body {
-        height: 300vh;
+        height: 210vh;
     }
 
     section {
@@ -34,6 +34,18 @@
 
     .usuario{
         display: none;
+    }
+
+    section {
+        article {
+            img {
+                width: 25vw;
+                height: 12vh;
+            }
+            h3 {
+                font-size: 0.80rem;
+            }
+        }
     }
 }
 
