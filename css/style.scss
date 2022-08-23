@@ -1,4 +1,9 @@
 @import "variables";
+<<<<<<< HEAD
+=======
+
+@import "fuentes";
+>>>>>>> segunda-entrega
 
 @import "fuentes";
 
@@ -70,15 +75,27 @@ nav {
 	grid-area: nav;
 	background-color: $background-color;
 	border: solid 2px $color_principal2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> segunda-entrega
 }
 
 .btn {
     color: $color_principal;
     border-color: $color_principal;
+<<<<<<< HEAD
 	&:hover{
 		color: $color_secundario2;
 		background-color: $color_principal;
 	} 
+=======
+	&:hover {
+		background-color: $color_principal;
+		color: $color_secundario2;
+		border-color: $color_principal;
+	}
+>>>>>>> segunda-entrega
 }
 
 /*---------------Banner---------------*/
@@ -86,8 +103,13 @@ nav {
 .banner {
 	width: 100%;
 	margin-top: 0.5em;
+<<<<<<< HEAD
 	margin-bottom: 1.5em;
 	box-shadow: 5px 5px 5px 5px #141414a6;
+=======
+	margin-bottom: 2em;
+	box-shadow: 5px 8px 6px 8px #141414a6;
+>>>>>>> segunda-entrega
 	img {
 		width: 100%;
 	}
@@ -169,7 +191,10 @@ section {
 /*---------------Footer------------*/
 @import "mixin";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> segunda-entrega
 footer {
 	margin-top: 2rem;
 	border-top: solid 4px $color_principal2;
@@ -179,6 +204,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	grid-area: footer;
+	border-top: solid 4px $color_principal2;
 	.conteiner {
 		width: 90%;
 		max-width: 1200px;
@@ -195,6 +221,7 @@ footer {
 		.footer_ {
 			display: flex;
 			justify-content: space-around;
+<<<<<<< HEAD
 			
 			a{
             	font-size: 3rem;
@@ -212,8 +239,27 @@ footer {
             	}  
             }
 		}
+=======
+			a{
+                font-size: 3rem;
+              .fa-instagram{
+                @include redes ($ig)
+              }
+              .fa-facebook{
+                @include redes ($fb)
+            }
+            .fa-envelope{
+                @include redes ($mail)
+            }
+            .fa-whatsapp{
+                @include redes ($wp)
+            }  
+            }
+        }
+>>>>>>> segunda-entrega
 	}
 }
+
 
 /*--------------Contacto---------------*/
 /*.casillaContacto {
@@ -245,4 +291,8 @@ div {
 	row-gap: 10px;
 }
 
+<<<<<<< HEAD
 @import "@medias";
+=======
+@import "@medias"
+>>>>>>> segunda-entrega
