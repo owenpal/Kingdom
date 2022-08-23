@@ -46,6 +46,8 @@ html {
 /*---------------Nav---------------*/
 nav {
   grid-area: nav;
+  background-color: lightgrey;
+  border: solid 2px rgb(240, 216, 55);
 }
 nav ul {
   font-size: 1rem;
@@ -70,13 +72,18 @@ nav ul li a:active {
   color: rgb(75, 0, 110);
   border-color: rgb(75, 0, 110);
 }
+.btn:hover {
+  background-color: rgb(75, 0, 110);
+  color: white;
+  border-color: rgb(75, 0, 110);
+}
 
 /*---------------Banner---------------*/
 .banner {
   width: 100%;
   margin-top: 0.5em;
   margin-bottom: 2em;
-  box-shadow: 5px 10px 8px 10px rgba(20, 20, 20, 0.6509803922);
+  box-shadow: 5px 8px 6px 8px rgba(20, 20, 20, 0.6509803922);
 }
 .banner img {
   width: 100%;
@@ -154,6 +161,7 @@ footer {
   bottom: 0;
   width: 100%;
   grid-area: footer;
+  border-top: solid 4px rgb(240, 216, 55);
 }
 footer .conteiner {
   width: 90%;
@@ -175,11 +183,10 @@ footer .conteiner .footer_ {
 }
 footer .conteiner .footer_ a {
   font-size: 3rem;
-  color: white;
 }
 footer .conteiner .footer_ a .fa-instagram {
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 footer .conteiner .footer_ a .fa-instagram:hover {
   color: #eb4ed4;
@@ -188,7 +195,7 @@ footer .conteiner .footer_ a .fa-instagram:hover {
 }
 footer .conteiner .footer_ a .fa-facebook {
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 footer .conteiner .footer_ a .fa-facebook:hover {
   color: #3865c5;
@@ -197,16 +204,16 @@ footer .conteiner .footer_ a .fa-facebook:hover {
 }
 footer .conteiner .footer_ a .fa-envelope {
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 footer .conteiner .footer_ a .fa-envelope:hover {
-  color: gray;
+  color: rgb(218, 218, 218);
   transform: scale(1.2);
   transition: all 0.4s;
 }
 footer .conteiner .footer_ a .fa-whatsapp {
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 footer .conteiner .footer_ a .fa-whatsapp:hover {
   color: #25d366;
@@ -244,7 +251,6 @@ div {
   row-gap: 10px;
 }
 
-/*---------------Queries---------------*/
 @media screen and (max-width: 756px) {
   #principal {
     display: grid;
@@ -274,6 +280,13 @@ div {
   }
   .usuario {
     display: none;
+  }
+  section article img {
+    width: 25vw;
+    height: 12vh;
+  }
+  section article h3 {
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 757px) {

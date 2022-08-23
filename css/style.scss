@@ -1,14 +1,6 @@
-$color_principal: rgb(75, 0, 110);
-$color_principal2:  rgb(240, 216, 55);
-$color_secundario1: gray;
-$color_secundario2: white;
-$color_secundario3: lightgray;
-$color_secundario4: #eb4ed4;
-$color_secundario5: #3865c5;
-$color_secundario6: #25d366;
-$font1: RiseOfKingdom;
-$font2: Aileron;
-$background-color: rgba(199, 199, 199, 0.6);
+@import "variables";
+
+@import "fuentes";
 
 
 @font-face {
@@ -84,11 +76,19 @@ nav {
 		}
 	}
 	grid-area: nav;
+	background-color: $background-color;
+	border: solid 2px $color_principal2;
+
 }
 
 .btn {
     color: $color_principal;
     border-color: $color_principal;
+	&:hover {
+		background-color: $color_principal;
+		color: $color_secundario2;
+		border-color: $color_principal;
+	}
 }
 
 /*---------------Banner---------------*/
@@ -97,7 +97,7 @@ nav {
 	width: 100%;
 	margin-top: 0.5em;
 	margin-bottom: 2em;
-	box-shadow: 5px 10px 8px 10px #141414a6;
+	box-shadow: 5px 8px 6px 8px #141414a6;
 	img {
 		width: 100%;
 	}
@@ -143,7 +143,7 @@ button {
 }
 
 article {
-    background-color: $color_secundario3;
+    background-color: $background-color;
     border-radius: 15px;
     text-align: center;
     margin-top: 0;
@@ -171,6 +171,8 @@ section {
 }
 
 /*---------------Footer------------*/
+@import "mixin";
+
 footer {
 	margin-top: 2rem;
 	background-position: center;
@@ -179,6 +181,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	grid-area: footer;
+	border-top: solid 4px $color_principal2;
 	.conteiner {
 		width: 90%;
 		max-width: 1200px;
@@ -195,49 +198,25 @@ footer {
 		.footer_ {
 			display: flex;
 			justify-content: space-around;
-			a {
-				font-size: 3rem;
-				color: $color_secundario2;
-				.fa-instagram {
-					padding: 10px;
-					color: $color_secundario2;
-					&:hover {
-						color: $color_secundario4;
-						transform: scale(1.2);
-						transition: all 0.4s;
-					}
-				}
-				.fa-facebook {
-					padding: 10px;
-					color: $color_secundario2;
-					&:hover {
-						color: $color_secundario5;
-						transform: scale(1.2);
-						transition: all 0.4s;
-					}
-				}
-				.fa-envelope {
-					padding: 10px;
-					color: $color_secundario2;
-					&:hover {
-						color: $color_secundario1;
-						transform: scale(1.2);
-						transition: all 0.4s;
-					}
-				}
-				.fa-whatsapp {
-					padding: 10px;
-					color: $color_secundario2;
-					&:hover {
-						color: $color_secundario6;
-						transform: scale(1.2);
-						transition: all 0.4s;
-					}
-				}
-			}
-		}
+			a{
+                font-size: 3rem;
+              .fa-instagram{
+                @include redes ($ig)
+              }
+              .fa-facebook{
+                @include redes ($fb)
+            }
+            .fa-envelope{
+                @include redes ($mail)
+            }
+            .fa-whatsapp{
+                @include redes ($wp)
+            }  
+            }
+        }
 	}
 }
+
 
 /*--------------Contacto---------------*/
 /*.casillaContacto {
@@ -250,7 +229,7 @@ footer {
 }*/
 
 .formulario {
-    background-color: $color_secundario3;
+    background-color: $background-color;
     margin-top: 1em;
     border-radius: 10px;
     box-shadow: 5px 10px 8px 10px #141414a6;
@@ -269,67 +248,4 @@ div {
 	row-gap: 10px;
 }
 
-/*---------------Queries---------------*/
-@media screen and (max-width: 756px) {
-    #principal {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 5% 4% 15% auto 20%;
-        grid-template-areas: "header" "nav" "div" "section" "footer";
-    }
-    
-    body {
-        height: 210vh;
-    }
-
-    section {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .banner {
-        margin-top: 1em;
-    }
-
-    #descripcion {
-        font-size: 1.1rem;
-    }
-
-    .subTitulo {
-        margin-top: 1em;
-    }
-
-    nav {
-        justify-content: space-around;
-    }
-
-    .usuario{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 757px) {
-    #principal {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 6% 4% 34% auto 16%;
-        grid-template-areas: "header" "nav" "div" "section" "footer";
-    }
-    
-    section {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(3, auto);
-        margin-top: 70px;
-    }
-
-    .subTitulo {
-        margin-top: 1em;
-        font-size: 2rem;
-    }
-
-    .usuario {
-        display: inline
-    }
-}
+@import "@medias"
