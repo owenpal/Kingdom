@@ -68,11 +68,17 @@ nav {
 		}
 	}
 	grid-area: nav;
+	background-color: $background-color;
+	border: solid 2px $color_principal2;
 }
 
 .btn {
     color: $color_principal;
     border-color: $color_principal;
+	&:hover{
+		color: $color_secundario2;
+		background-color: $color_principal;
+	} 
 }
 
 /*---------------Banner---------------*/
@@ -80,8 +86,8 @@ nav {
 .banner {
 	width: 100%;
 	margin-top: 0.5em;
-	margin-bottom: 2em;
-	box-shadow: 5px 10px 8px 10px #141414a6;
+	margin-bottom: 1.5em;
+	box-shadow: 5px 5px 5px 5px #141414a6;
 	img {
 		width: 100%;
 	}
@@ -102,7 +108,7 @@ body {
 #descripcion {
     color: $color_principal;
     text-shadow: 2px 2px $color_principal2;
-    background-color: $background-color;
+    background-color: $background-colorT;
     font-size: 1.75rem;
     margin-top: 1em;
     margin-bottom: 50px; 
@@ -110,10 +116,10 @@ body {
 
 .subTitulo {
     color: $color_principal;
-    background-color: $background-color;
+    background-color: $background-colorT;
     font-size: 1.5rem;
     text-decoration: underline;
-    /*text-shadow: 2px 2px $color_principal2;*/
+    text-shadow: 2px 2px $color_principal2;
     margin-bottom: 0;
 }
 
@@ -127,7 +133,7 @@ button {
 }
 
 article {
-    background-color: lightgray;
+    background-color: $background-color;
     border-radius: 15px;
     text-align: center;
     margin-top: 0;
@@ -166,6 +172,7 @@ section {
 
 footer {
 	margin-top: 2rem;
+	border-top: solid 4px $color_principal2;
 	background-position: center;
 	background-color: black;
 	position: absolute;
@@ -219,7 +226,7 @@ footer {
 }*/
 
 .formulario {
-    background-color: lightgray;
+    background-color: $background-color;
     margin-top: 1em;
     border-radius: 10px;
     box-shadow: 5px 10px 8px 10px #141414a6;

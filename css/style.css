@@ -46,6 +46,8 @@ html {
 /*---------------Nav---------------*/
 nav {
   grid-area: nav;
+  background-color: lightgray;
+  border: solid 2px rgb(240, 216, 55);
 }
 nav ul {
   font-size: 1rem;
@@ -70,13 +72,17 @@ nav ul li a:active {
   color: rgb(75, 0, 110);
   border-color: rgb(75, 0, 110);
 }
+.btn:hover {
+  color: white;
+  background-color: rgb(75, 0, 110);
+}
 
 /*---------------Banner---------------*/
 .banner {
   width: 100%;
   margin-top: 0.5em;
-  margin-bottom: 2em;
-  box-shadow: 5px 10px 8px 10px rgba(20, 20, 20, 0.6509803922);
+  margin-bottom: 1.5em;
+  box-shadow: 5px 5px 5px 5px rgba(20, 20, 20, 0.6509803922);
 }
 .banner img {
   width: 100%;
@@ -107,7 +113,7 @@ body {
   background-color: rgba(199, 199, 199, 0.6);
   font-size: 1.5rem;
   text-decoration: underline;
-  /*text-shadow: 2px 2px $color_principal2;*/
+  text-shadow: 2px 2px rgb(240, 216, 55);
   margin-bottom: 0;
 }
 
@@ -154,6 +160,7 @@ section article button:hover {
 /*---------------Footer------------*/
 footer {
   margin-top: 2rem;
+  border-top: solid 4px rgb(240, 216, 55);
   background-position: center;
   background-color: black;
   position: absolute;
@@ -205,7 +212,7 @@ footer .conteiner .footer_ a .fa-envelope {
   color: #fff;
 }
 footer .conteiner .footer_ a .fa-envelope:hover {
-  color: lightgray;
+  color: rgb(218, 218, 218);
   transform: scale(1.2);
   transition: all 0.4s;
 }
