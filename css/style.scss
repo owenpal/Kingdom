@@ -3,14 +3,6 @@
 @import "fuentes";
 
 
-@font-face {
-    font-family: RiseOfKingdom;
-    src: url('../media/fonts/riseofkingdom.ttf');
-    font-family: Aileron;
-    src: url('../media/fonts/Aileron-Bold.otf')
-}
-
-
 html {
     position: relative;
     min-height: 100%;
@@ -129,7 +121,7 @@ body {
     background-color: $background-color;
     font-size: 1.5rem;
     text-decoration: underline;
-    text-shadow: 2px 2px $color_principal2;
+    /*text-shadow: 2px 2px $color_principal2;*/
     margin-bottom: 0;
 }
 
@@ -153,8 +145,14 @@ article {
 section {
 	article {
 		img {
-			width: 11vw;
-			height: 11vh;
+			width: 9.5vw;
+			height: 11.5vh;
+			&:hover {
+				transform: scale(2, 2);
+			}
+		}
+		h3 {
+			font-size: 1.25rem;
 		}
 		button {
 			&:hover {
@@ -249,3 +247,4 @@ div {
 }
 
 @import "@medias"
+
