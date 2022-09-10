@@ -4,6 +4,12 @@
   font-family: Aileron;
   src: url("../media/fonts/Aileron-Bold.otf");
 }
+@font-face {
+  font-family: RiseOfKingdom;
+  src: url("../media/fonts/riseofkingdom.ttf");
+  font-family: Aileron;
+  src: url("../media/fonts/Aileron-Bold.otf");
+}
 html {
   position: relative;
   min-height: 100%;
@@ -28,7 +34,7 @@ html {
   list-style: none;
   position: absolute;
   right: 30px;
-  top: 25px;
+  top: 15px;
   z-index: 1;
   font-size: 1rem;
   color: rgb(240, 216, 55);
@@ -42,15 +48,14 @@ html {
   background: none;
   border: none;
 }
+.login:hover {
+  color: gray;
+}
 
 /*---------------Nav---------------*/
 nav {
   grid-area: nav;
-<<<<<<< HEAD
-  background-color: lightgray;
-=======
   background-color: lightgrey;
->>>>>>> segunda-entrega
   border: solid 2px rgb(240, 216, 55);
 }
 nav ul {
@@ -77,27 +82,17 @@ nav ul li a:active {
   border-color: rgb(75, 0, 110);
 }
 .btn:hover {
-<<<<<<< HEAD
-  color: white;
-  background-color: rgb(75, 0, 110);
-=======
   background-color: rgb(75, 0, 110);
   color: white;
   border-color: rgb(75, 0, 110);
->>>>>>> segunda-entrega
 }
 
 /*---------------Banner---------------*/
 .banner {
   width: 100%;
   margin-top: 0.5em;
-<<<<<<< HEAD
-  margin-bottom: 1.5em;
-  box-shadow: 5px 5px 5px 5px rgba(20, 20, 20, 0.6509803922);
-=======
   margin-bottom: 2em;
   box-shadow: 5px 8px 6px 8px rgba(20, 20, 20, 0.6509803922);
->>>>>>> segunda-entrega
 }
 .banner img {
   width: 100%;
@@ -142,7 +137,7 @@ button {
 }
 
 article {
-  background-color: lightgray;
+  background-color: lightgrey;
   border-radius: 15px;
   text-align: center;
   margin-top: 0;
@@ -252,7 +247,7 @@ footer .conteiner .footer_ a .fa-whatsapp:hover {
     width: 98%;
 }*/
 .formulario {
-  background-color: lightgray;
+  background-color: lightgrey;
   margin-top: 1em;
   border-radius: 10px;
   box-shadow: 5px 10px 8px 10px rgba(20, 20, 20, 0.6509803922);
@@ -281,6 +276,17 @@ div {
   }
   body {
     height: 210vh;
+    background: linear-gradient(rgba(94, 81, 81, 0.6), rgba(105, 103, 85, 0.6));
+  }
+  .barraM .usuario {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .barraM .usuario li {
+    margin: 5px;
+  }
+  .barra {
+    display: none;
   }
   section {
     display: grid;
@@ -316,6 +322,9 @@ div {
     grid-template-columns: auto;
     grid-template-rows: 6% 4% 34% auto 16%;
     grid-template-areas: "header" "nav" "div" "section" "footer";
+  }
+  .barraM {
+    display: none;
   }
   section {
     display: grid;
