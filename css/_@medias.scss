@@ -8,6 +8,21 @@
     
     body {
         height: 210vh;
+        background: linear-gradient(rgba(94, 81, 81, 0.6), rgba(105, 103, 85, 0.6));
+    }
+
+    .barraM {
+        .usuario{
+                 display: flex;
+		         justify-content: flex-end;
+                 li {
+                    margin: 5px;
+                 }
+        }
+    }
+
+    .barra {
+        display: none;
     }
 
     section {
@@ -55,6 +70,10 @@
         grid-template-columns: auto;
         grid-template-rows: 6% 4% 34% auto 16%;
         grid-template-areas: "header" "nav" "div" "section" "footer";
+    }
+
+    .barraM {
+        display: none;
     }
     
     section {

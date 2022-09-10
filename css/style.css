@@ -4,6 +4,12 @@
   font-family: Aileron;
   src: url("../media/fonts/Aileron-Bold.otf");
 }
+@font-face {
+  font-family: RiseOfKingdom;
+  src: url("../media/fonts/riseofkingdom.ttf");
+  font-family: Aileron;
+  src: url("../media/fonts/Aileron-Bold.otf");
+}
 html {
   position: relative;
   min-height: 100%;
@@ -28,7 +34,7 @@ html {
   list-style: none;
   position: absolute;
   right: 30px;
-  top: 25px;
+  top: 15px;
   z-index: 1;
   font-size: 1rem;
   color: rgb(240, 216, 55);
@@ -41,6 +47,9 @@ html {
   color: rgb(240, 216, 55);
   background: none;
   border: none;
+}
+.login:hover {
+  color: gray;
 }
 
 /*---------------Nav---------------*/
@@ -128,7 +137,7 @@ button {
 }
 
 article {
-  background-color: lightgray;
+  background-color: lightgrey;
   border-radius: 15px;
   text-align: center;
   margin-top: 0;
@@ -161,6 +170,7 @@ section article button:hover {
 /*---------------Footer------------*/
 footer {
   margin-top: 2rem;
+  border-top: solid 4px rgb(240, 216, 55);
   background-position: center;
   background-color: black;
   position: absolute;
@@ -195,7 +205,7 @@ footer .conteiner .footer_ a .fa-instagram {
   color: #fff;
 }
 footer .conteiner .footer_ a .fa-instagram:hover {
-  color: #eb4ed4;
+  color: #b14eeb;
   transform: scale(1.2);
   transition: all 0.4s;
 }
@@ -237,7 +247,7 @@ footer .conteiner .footer_ a .fa-whatsapp:hover {
     width: 98%;
 }*/
 .formulario {
-  background-color: lightgray;
+  background-color: lightgrey;
   margin-top: 1em;
   border-radius: 10px;
   box-shadow: 5px 10px 8px 10px rgba(20, 20, 20, 0.6509803922);
@@ -265,7 +275,18 @@ div {
     grid-template-areas: "header" "nav" "div" "section" "footer";
   }
   body {
-    height: 270vh;
+    height: 210vh;
+    background: linear-gradient(rgba(94, 81, 81, 0.6), rgba(105, 103, 85, 0.6));
+  }
+  .barraM .usuario {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .barraM .usuario li {
+    margin: 5px;
+  }
+  .barra {
+    display: none;
   }
   section {
     display: grid;
@@ -301,6 +322,9 @@ div {
     grid-template-columns: auto;
     grid-template-rows: 6% 4% 34% auto 16%;
     grid-template-areas: "header" "nav" "div" "section" "footer";
+  }
+  .barraM {
+    display: none;
   }
   section {
     display: grid;
